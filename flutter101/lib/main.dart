@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'ListTitleDemoPage.dart';
 import 'ListViewBuilderDemoPage.dart';
+import 'StatefulDemoPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,6 +29,7 @@ class HomePage extends StatelessWidget {
     ChildPage(
         name: 'ListViewBuilderDemoPage',
         childPageWidget: ListViewBuilderDemoPage()),
+    ChildPage(name: 'StatefulDemoPage', childPageWidget: StatefulDemoPage()),
   ];
 
   @override
@@ -56,6 +58,6 @@ class HomePage extends StatelessWidget {
 //產品資料
 class ChildPage {
   final String name;
-  final StatelessWidget childPageWidget;
+  final Widget childPageWidget;
   ChildPage({this.name, this.childPageWidget});
 }
