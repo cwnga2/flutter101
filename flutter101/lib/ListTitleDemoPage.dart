@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ListTitleDemoPage extends StatelessWidget {
+class ListTitleDemoPage extends StatefulWidget {
+  @override
+  _ListTitleDemoPageState createState() => _ListTitleDemoPageState();
+}
+
+class _ListTitleDemoPageState extends State<ListTitleDemoPage> {
   List<Widget> list = <Widget>[
     ListTile(
       title: Text(

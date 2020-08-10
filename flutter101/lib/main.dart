@@ -1,9 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'ListTitleDemoPage.dart';
 import 'ListViewBuilderDemoPage.dart';
 import 'StatefulDemoPage.dart';
+import './location_detail/location_detail.dart';
+import './style.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,23 +13,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+            appBarTheme: AppBarTheme(
+                textTheme: TextTheme(
+          headline6: AppBarTextStyle,
+        ))),
         home: Scaffold(
-      appBar: AppBar(
-        title: Text('tutorial'),
-      ),
-      body: HomePage(),
-    ));
+          appBar: AppBar(
+            title: Text('tutorial'),
+          ),
+          body: HomePage(),
+        ));
   }
 }
 
 class HomePage extends StatelessWidget {
-  //透過資料產生器，產生資料
   final List<ChildPage> listItems = [
     ChildPage(name: 'ListTitleDemoPage', childPageWidget: ListTitleDemoPage()),
     ChildPage(
         name: 'ListViewBuilderDemoPage',
         childPageWidget: ListViewBuilderDemoPage()),
     ChildPage(name: 'StatefulDemoPage', childPageWidget: StatefulDemoPage()),
+    ChildPage(name: 'location', childPageWidget: LocationDetail()),
   ];
 
   @override
@@ -47,7 +52,7 @@ class HomePage extends StatelessWidget {
     ));
   }
 
-  Void pushToDemoPage(BuildContext context, ChildPage listItem) {
+  void pushToDemoPage(BuildContext context, ChildPage listItem) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => listItem.childPageWidget),
