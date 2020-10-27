@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'ListTitleDemoPage.dart';
+import 'list_view_title/ListTitleDemoPage.dart';
 import 'ListViewBuilderDemoPage.dart';
 import 'StatefulDemoPage.dart';
 import './location_detail/location_detail.dart';
 import './style.dart';
+import 'mvvm/MVVMdemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +36,7 @@ class HomePage extends StatelessWidget {
         childPageWidget: ListViewBuilderDemoPage()),
     ChildPage(name: 'StatefulDemoPage', childPageWidget: StatefulDemoPage()),
     ChildPage(name: 'location', childPageWidget: LocationDetail()),
+    ChildPage(name: 'MVVMDemo', childPageWidget: MVVMDemo()),
   ];
 
   @override
