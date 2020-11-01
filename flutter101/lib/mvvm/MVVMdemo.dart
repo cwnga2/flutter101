@@ -71,21 +71,6 @@ class BPage extends StatelessWidget {
         title: Text('B頁'),
       ),
       body: Center(
-        // 透過 Consumer 來接收更改對應資料
-        // child: Consumer<MyCountChangeNotifier>(builder: (context, counter, _) {
-        //   return Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: <Widget>[
-        //       Text(
-        //         '目前計數值:',
-        //       ),
-        //       Text(
-        //         '${counter.count}',
-        //       ),
-        //     ],
-        //   );
-        // }),
-
         child: Consumer<MyCountChangeNotifier>(
             builder: (context, counter, child) => Text(
                   '${counter.count}',
