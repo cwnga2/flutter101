@@ -6,6 +6,7 @@ import './location_detail/location_detail.dart';
 import './style.dart';
 import 'mvvm/MVVMdemo.dart';
 import 'mvvm/MVVMdemo2.dart';
+import 'mvvm/MVVMdemo3.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,7 @@ class HomePage extends StatelessWidget {
     ChildPage(name: 'StatefulDemoPage', childPageWidget: StatefulDemoPage()),
     ChildPage(name: 'location', childPageWidget: LocationDetail()),
     ChildPage(name: 'MVVMDemo', childPageWidget: MVVMDemo()),
+    ChildPage(name: 'MVVMDemo3', childPageWidget: MVVMDemo3()),
     ChildPage(name: 'MVVMDemo2', childPageWidget: MVVMDemo2()),
   ];
 
